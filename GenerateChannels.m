@@ -8,5 +8,5 @@ function channels = GenerateChannels(signal, s, theta, f)
     
     phi = CalculatePhaseOffsets(f,theta,s);%calculating phase offset at each element
     
-    channels = channels.*exp(1i*phi');%creating phase difference in each channel
+    channels = channels.*exp(1i*phi.');%creating phase difference in each channel
 end

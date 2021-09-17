@@ -9,7 +9,7 @@ Fs = 4e9; %sampling frequency
 Flo=15e9;
 
 %Parameters to generate signal 1 and splitting it into each channel
-trueAzim1 = 40*(pi/180);
+trueAzim1 = -30*(pi/180);
 trueElev1 = 50*(pi/180);
 dc1 = 0.1;
 Fif1 = 1.8e9;

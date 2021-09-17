@@ -10,14 +10,10 @@ function [AoA2,AoA3] = CalculateAoA(phi,s,f)
         I2max=round(s(2)/lamda);
         I3max=round(s(3)/lamda);
         dif=100;
-        for i2 = 0:I2max
-            for i3 = 0:I3max
+        for i2 = -I2max:I2max
+            for i3 = -I3max:I3max
                 AoA2temp=asin(lamda*(phi(2,k)/(2*pi)+i2)/s(2));
-                p2=phi(2);
-                pk2=phi(2,k);
                 AoA3temp=asin(lamda*(phi(3,k)/(2*pi)+i3)/s(3));
-                p3=phi(3);
-                pk3=phi(3,k);
                 if dif > abs(AoA2temp-AoA3temp)
                     dif = abs(AoA2temp-AoA3temp);
                     I2=i2;
